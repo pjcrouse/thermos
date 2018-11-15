@@ -1,0 +1,27 @@
+<ul class="bookmarks">
+    {% for bookmark in bookmarks %}
+
+    <li>
+        <a class="header" href="{{ bookmark.url }}">
+            <h3 class="description">
+                {{ bookmark.description|truncate(50, killwords=True) }}
+            </h3>
+            <span class="url">
+                {{ bookmark.url|truncate(50, killwords=True) }}
+            </span>
+        </a>
+
+        <div class="info">
+            <br>
+
+            Added by <a href="{{ url_for('user', username=bookmark.user.username) }}">
+            {{ bookmark.user.username }}
+        </a>
+            {{ moment(bookmark.date).fromNow() }}.
+            {% if current_user == bookmark.user %}
+            <span class="editlinks"><a href="{{ url_for('edit_bookmark', bookmark_id=bookmark.id) }}">edit</a> </span>
+            {% endif %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
