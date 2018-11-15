@@ -1,0 +1,5 @@
+db migration:
+
+eliminate the db by running rm thermos/thermos.db
+then can do the python manage.py db upgrade to follow all migration scripts
+

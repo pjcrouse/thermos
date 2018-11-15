@@ -9,20 +9,12 @@ migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 
 @manager.command
-def init_db():
-    db.create_all()
-    db.session.add(User(username='pcrouse', email='patcrouse@gmail.com', password='test'))
-    db.session.add(User(username='xcrouse', email='xandercrouse@gmail.com', password='test'))
-    db.session.commit()
-    print("Initialized the database")
-
-@manager.command
 def insert_data():
-    pcrouse = User(Userusername='pcrouse', email='patcrouse@gmail.com', password='test')
+    pcrouse = User(username='pcrouse', email='patcrouse@gmail.com', password='test')
     db.session.add(pcrouse)
 
     def add_bookmark(url, description, tags):
-        db.session.add(Bookmark(url=url, description=description, user=reindert,
+        db.session.add(Bookmark(url=url, description=description, user=pcrouse,
                                 tags=tags))
 
     for name in ["python", "flask", "webdev", "programming", "training", "news", "orm", "databases", "emacs", "gtd", "django"]:

@@ -168,6 +168,18 @@ a:hover, aside a:hover, aside a:visited:hover {
     color: #D39447;
 }
 
+aside a {
+    color: #FFD6A3
+}
+
+aside a:hover {
+    color: #F5BB73;
+}
+
+aside a:visited {
+    color: #D39447;
+}
+
 a:visited {
     color: #1E5373;
 }
@@ -229,6 +241,13 @@ ul.bookmarks {
     list-style: none none;
     padding-left: 0;
 }
+
+.bookmark {
+    padding-bottom: .5em;
+    border-top: 1px solid #7EA6BF;
+    padding: 1em 0;
+}
+
 
 ul.bookmarks li {
     padding-bottom: .5em;
