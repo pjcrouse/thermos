@@ -3,7 +3,7 @@ from wtforms.fields import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.fields.html5 import URLField
 from wtforms.validators import DataRequired, url, Length, Regexp, EqualTo, Email, ValidationError
 
-from .models import User
+from ..models import User
 
 
 class BookmarkForm(FlaskForm):
@@ -29,4 +29,3 @@ class BookmarkForm(FlaskForm):
         self.tags.data = ','.join(tagset)
 
         return True
-
