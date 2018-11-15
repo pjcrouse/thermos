@@ -7,8 +7,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {% block styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% endblock %}}
 
     <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 </head>
@@ -70,6 +72,9 @@
 
 {{ moment.include_jquery() }}
 {{ moment.include_moment() }}
+
+{% block scripts %}
+{% endblock %}
 
 </body>
 </html>

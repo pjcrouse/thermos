@@ -27,7 +27,6 @@ def add():
 @login_required
 def edit_bookmark(bookmark_id):
     bookmark = Bookmark.query.get_or_404(bookmark_id)
-    print(bookmark)
     if current_user != bookmark.user:
         abort(403)
     form = BookmarkForm(obj=bookmark)

@@ -5,5 +5,7 @@ then can do the python manage.py db upgrade to follow all migration scripts
 
 run all nose tests using command nosetests
 
+add url_for('static', filename='css/select2.css')
 
+add url_for('static', filename='js/vendor/select2.min.js')
 
