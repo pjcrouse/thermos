@@ -1,9 +1,9 @@
 from flask import render_template, flash, redirect, url_for, request, abort
-from flask_login import login_required, login_user, logout_user, current_user
+from flask_login import login_required, current_user
 
 from . import bookmarks
-from thermos import app, db, login_manager
 from .forms import BookmarkForm
+from .. import db
 from ..models import User, Bookmark, Tag
 
 
