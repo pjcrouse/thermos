@@ -122,3 +122,6 @@ dmypy.json
 
 # Misc
 notes.txt
+
+# databases
+.db
