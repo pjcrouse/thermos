@@ -119,3 +119,6 @@ dmypy.json
 
 # Mac specific stuff
 .DS_Store
+
+# Misc
+notes.txt
